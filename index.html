@@ -267,8 +267,16 @@
     }
 
     .fall{
-        width:90px; /* mitad del tamaño */
-        border-radius:10px;
+    position:absolute;
+    width: clamp(70px, 20vw, 160px);
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.5);
+
+    top:-200px;
+    left:50%;
+    transform:translateX(-50%);
+
+    animation: caer 5s linear forwards;
     }
     
 }
@@ -306,10 +314,11 @@
 }
 
 /* posiciones diferentes */
-.f1{ left:10%; animation-delay:0s;}
-.f2{ left:30%; animation-delay:1s;}
-.f3{ left:55%; animation-delay:2s;}
-.f4{ left:75%; animation-delay:3s;}
+.f1{ transform:translateX(-160%) rotate(-10deg); animation-delay:0s;}
+.f2{ transform:translateX(-40%) rotate(8deg); animation-delay:1s;}
+.f3{ transform:translateX(60%) rotate(-6deg); animation-delay:2s;}
+.f4{ transform:translateX(180%) rotate(12deg); animation-delay:3s;}
+
 
 @keyframes caer{
     from{
