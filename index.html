@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Nuestro Cuento</title>
+    <title>9 MESESITOS JUNTOS</title>
     <style>
         body {
             display: flex;
@@ -15,7 +15,7 @@
     align-items: center;
     height: 100vh;
     font-family: 'Dancing Script', cursive;
-    background: #ffeef2; /* Fondo suave */
+     background: linear-gradient(120deg, #2b1055, #7597de); /* Fondo suave */
     animation: backgroundAnimation 15s ease infinite;
     margin: 0;
     padding: 0;
@@ -47,6 +47,9 @@
             background-size: cover;
             background-position: center;
             overflow: hidden;
+            opacity:0;
+            animation: fadeIn 1.2s forwards;
+            font-family:'Lora', serif;
         }
         
         .page::before {
@@ -63,6 +66,17 @@
     z-index: -1; /* Mantener la imagen detrás del contenido */
 }
 
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 .page span {
     position: relative;
     z-index: 1;
@@ -75,29 +89,29 @@
             background-position: center !important;
         }
         .page2::before {
-            background-image: url('2.jpeg') !important;
+            background-image: url('2.jpg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
         .page3::before {
-            background-image: url('3.jpg') !important;
+            background-image: url('3.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
         .page4::before {
-            background-image: url('4.jpg') !important;
+            background-image: url('4.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
 
         .page5::before {
-            background-image: url('5.jpg') !important;
+            background-image: url('5.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
 
         .page6::before {
-            background-image: url('6.jpg') !important;
+            background-image: url('6.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
@@ -109,7 +123,7 @@
         }
 
         .page8::before {
-            background-image: url('8.jpg') !important;
+            background-image: url('8.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
@@ -121,25 +135,25 @@
         }
 
         .page10::before {
-            background-image: url('10.jpg') !important;
+            background-image: url('10.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
 
         .page11::before {
-            background-image: url('11.jpg') !important;
+            background-image: url('11.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
 
         .page12::before {
-            background-image: url('12.jpg') !important;
+            background-image: url('12.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
 
         .page13::before {
-            background-image: url('13.jpg') !important;
+            background-image: url('13.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
@@ -151,13 +165,13 @@
         }
 
         .page15::before {
-            background-image: url('15.jpg') !important;
+            background-image: url('15.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
 
         .page16::before {
-            background-image: url('16.jpg') !important;
+            background-image: url('16.jpeg') !important;
             background-size: cover !important;
             background-position: center !important;
         }
@@ -194,25 +208,20 @@
 
 .final-message {
     font-family: 'Lora', serif;
-    font-size: 0.55rem; /* Ajusta el tamaño de la fuente, puedes cambiarlo */
+    font-size: clamp(0.9rem, 1.6vw, 1rem);
     text-align: center;
-    opacity: 0; /* Lo mantenemos oculto hasta que sea visible */
-    transition: opacity 0.5s ease-in-out; /* Agrega una transición suave para cuando aparezca */
-    padding: 20px; /* Añade un poco de espacio alrededor del texto */
-    width: 100%; /* Asegúrate de que ocupe el ancho completo */
-    max-width: 90%; /* Limita el tamaño máximo para evitar desbordamientos */
-    word-wrap: break-word; /* Asegura que las palabras largas se ajusten si es necesario */
-    line-height: 1.5; /* Ajusta la altura de la línea para mejor legibilidad */
-    margin: 0 auto; /* Centra el mensaje */
-    overflow: hidden; /* Evita el desbordamiento de texto */
-    white-space: normal; /* Permite saltos de línea si es necesario */
-    color: white; /* Blanco para el texto */
-    
+    padding: 15px;
+    width: 100%;
+    max-width: 520px; /* clave para que no se estire */
+    margin: auto;
+    line-height: 1.7;
+    color: #333;
+    box-sizing: border-box;
 }
 
 .final-message h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+     font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    margin-bottom: 10px;
     color: #e91e63;  /* Color del encabezado */
 }
 
@@ -223,6 +232,24 @@
     line-height: 1.6;
     text-align: justify;
 }
+
+.last-page{
+    overflow-y: auto;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start; /* ← cambia esto */
+    padding-top:20px;
+}
+
+.last-page::-webkit-scrollbar {
+    width:6px;
+}
+
+.last-page::-webkit-scrollbar-thumb{
+    background:#e91e63;
+    border-radius:10px;
+}
+
 
         /* 📱 Responsive para móviles */
 @media (max-width: 500px) {
@@ -238,35 +265,111 @@
         font-size: 14px;
         padding: 8px 15px;
     }
+    
 }
-         
+
+.cover{
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color:rgb(78, 40, 64);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.cover h1{
+    font-size:40px;
+    font-family:'Great Vibes', cursive;
+}
+
+.intro{
+    position: fixed;
+    width:100%;
+    height:100vh;
+    background:black;
+    overflow:hidden;
+    z-index:9999;
+}
+
+/* estilo de las fotos */
+.fall{
+    position:absolute;
+    width:180px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.5);
+    animation: caer 4s linear forwards;
+}
+
+/* posiciones diferentes */
+.f1{ left:10%; animation-delay:0s;}
+.f2{ left:30%; animation-delay:1s;}
+.f3{ left:55%; animation-delay:2s;}
+.f4{ left:75%; animation-delay:3s;}
+
+@keyframes caer{
+    from{
+        top:-250px;
+        transform:rotate(0deg);
+        opacity:0;
+    }
+    to{
+        top:110%;
+        transform:rotate(360deg);
+        opacity:1;
+    }
+}
+
     </style>
 </head>
 <body>
+<div class="intro">
+    <img src="recuerdo_1.jpg" class="fall f1">
+    <img src="recuerdo_2.jpg" class="fall f2">
+    <img src="recuerdo_3.jpg" class="fall f3">
+    <img src="recuerdo_4.jpg" class="fall f4">
+</div>
+
     <div class="book">
-        <div class="page page1">🎉 ¡Feliz cumpleaños, mi amor! 🎉</div>
-        <div class="page page2">💖 Bienvenida a nuestra historia, donde cada página es un momento especial 💖</div>
-        <div class="page page3">✨ Desde el día que nos conocimos, todo cambió. En cada mensaje, en cada risa, sentí que algo hermoso comenzaba ✨</div>
-        <div class="page page4">🌍 Aunque estemos lejos, siempre estamos cerca. En cada pensamiento, en cada mirada a la pantalla, en cada "te extraño" sincero 🌍</div>
-        <div class="page page5">💙 Eres increíble, nunca lo olvides. Tu fuerza, tu ternura, tu risa… cada parte de ti es un tesoro 💙</div>
+        <div class="page cover">
+    <h1>Capítulo 9</h1>
+    <p>Nuestra historia continúa...</p>
+</div>
+        <div class="page page2">💖 Todo lo nuestro dejó de ser una ilusión el día que viajé a Medellín para conocerte… ahí entendí que no eras solo alguien especial, eras alguien que mi vida necesitaba 💖</div>
+        <div class="page page3">✨ Aún recuerdo la emoción de verte por primera vez, los nervios, la sonrisa imposible de disimular ✨</div>
+        <div class="page page4">🍝 Nunca voy a olvidar tu pollito con pasta… porque no fue solo la comida, fue el amor con el que lo preparaste y la forma en que me hiciste sentir cuidado, como si siempre hubiera pertenecido ahí 🍝</div>
+        <div class="page page5">🎨 Podría quedarme horas mirándote practicar tatuaje, concentrada, detallista, poniendo el corazón en cada trazo… y mientras te observaba solo pensaba: qué increíble mujer es mi amorcito mio 🎨</div>
         <div class="page page6">👩‍👧 Ser mamá no es fácil, pero tú lo haces con un amor y una entrega que admiro profundamente 👩‍👧</div>
         <div class="page page7">🚀 Estás construyendo tu propio sueño y eso me enorgullece. Sé que lograrás todo lo que te propongas 🚀</div>
-        <div class="page page8">🎶 Me encanta cómo me inspiras, cómo haces que cada día tenga algo especial 🎶</div>
-        <div class="page page9">💌 Este es solo un pequeño detalle, pero quiero que sepas que en cada palabra hay cariño, admiración y amor 💌</div>
-        <div class="page page10">💫 Este viaje es solo el comienzo de un capítulo nuevo en nuestra historia. ¡Cada paso me acerca más a ti! 💫</div>
-        <div class="page page11">🌟 No hay distancia que pueda separarnos, y aunque todavía no nos hayamos abrazado, siento tu cariño más cerca que nunca 🌟</div>
-        <div class="page page12">🌅 Imagino cómo será despertar a tu lado, conocer tu ciudad, tus costumbres… y compartir juntos esos pequeños detalles de cada día 🌅</div>
-        <div class="page page13">🎁 Este viaje también es un regalo para ti, una forma de demostrarte cuánto te quiero y lo importante que eres para mí 🎁</div>
-        <div class="page page14">🎉 Cada conversación, cada risa, cada expectativa… todo eso hace que este viaje sea aún más especial. Pronto estaremos juntos, y todo será aún mejor 🎉</div>
-        <div class="page page15">🌺 No importa que estemos a kilómetros de distancia, te siento tan cerca, como si estuvieras aquí mismo. Y pronto, lo estarás 🌺</div>
-        <div class="page page16">💬 Habrá tanto por decir, por hacer y por sentir. Ya me imagino cada momento, y cada uno de esos momentos será inolvidable 💬</div>
+        <div class="page page8">🌟 Me enamora la forma en que tratas a tus clientas, siempre dando lo mejor de ti, cuidando cada detalle y trabajando con amor… porque eso habla de la clase de mujer que eres 🌟</div>
+        <div class="page page9">
+💌 Quería regalarte algo que pudieras volver a leer cada vez que quisieras sentirme cerquita, porque en cada palabra vive todo el cariño, la admiración y el amor que siento por ti 💌
+</div>
+        <div class="page page10">💫 Este reencuentro marca el comienzo de un capítulo aún más hermoso en nuestra historia. Cada día nos acerca más al momento de volver a mirarnos frente a frente 💫</div>
+        <div class="page page11">✨ Estos 9 meses han sido prueba de que el amor verdadero no se rinde. Hemos aprendido a elegirnos incluso en los días difíciles, a sostenernos en la distancia y a soñar con un futuro donde ya no haya despedidas, solo un nosotros para toda la vida ✨</div>
+        <div class="page page12">❤️ Ese viaje no solo me llevó a otra ciudad… me llevó a la mujer que hoy amo, y desde entonces supe que lo nuestro no era casualidad, era un encuentro que la vida tenía preparado ❤️</div>
+        <div class="page page13">🎁 Tu llegada será el regalo más hermoso que la vida podría darme. Más que un momento esperado, será la confirmación de todo lo que hemos construido con amor 🎁</div>
+        <div class="page page14">🎉 Cada conversación, cada risa y cada instante nos han traído hasta aquí. Pronto dejaremos de contar los días y comenzaremos a crear recuerdos juntos 🎉</div>
+        <div class="page page15">
+🌺 Cuando estés aquí viviremos días que quedarán grabados para siempre… días de despertar juntos, de cocinar lado a lado, de reírnos sin razón, de mirarnos y entender que todo este tiempo valió la pena. Porque más que el destino, lo que hace mágico cada momento es poder compartirlo contigo 🌺
+</div>
+
+        <div class="page page16">💬 Habrá tanto por decir, por sentir y por vivir… pero lo que más anhelo es ese instante en el que nuestros mundos se encuentren nuevamente 💬</div>
         <div class="page last-page">
             <div class="final-message">
-                <h2>Hola mi amor precioso</h2>
-                <p>Espero y este pequeño detalle de mi corazoncito de pollo de color te guste. Yo sé que, por el momento, la única manera de expresarnos cariño y cuánto nos queremos es a través de una pantalla de celular cuando chateamos, conversamos por llamada y hacemos videollamada cuando extrañamos vernos, pero como sabrás, ya tenemos fecha para vernos en persona y espero ese día con muchas ansias.</p>
-                <p>Me gustas mucho y lo sabes, no lo dudes nunca. Si a veces me porto un poco raro, pero es porque siempre quiero saber de ti y eso me da un poco de melancolía. Pero como dije, debemos confiar el uno en el otro para que esto que sentimos funcione.</p>
-                <p>Espero que este día de tu cumpleaños sea increíble, mi amor. Pásalo lindo junto a tu familia y a la hipopamo. Te quiero, te extraño, deseo tanto abrazarte, contarte mis cosas en persona, llorar contigo si es que el momento lo amerita, triunfar juntos y salir adelante de los momentos en los cuales la vida nos ponga pruebas.</p>
-                <p>Te amo mucho también, mi chicuela hermosa. ¡Feliz CUMPLEAÑOS a la mujer que anhelo con todo el alma conocer y con la que deseo tener una vida si Dios así lo quiere!</p>
+                <h2>Mi morcito hermosa, mi Winnie Pooh ❤️</h2>
+                <p>Hoy celebramos nueve meses de una historia que comenzó casi sin darnos cuenta, pero que con el tiempo se ha convertido en algo profundamente importante para mí. Este detalle no es solo una sorpresa… es una forma de abrazarte con palabras mientras llega el momento de hacerlo en persona.</p>
+
+        <p>Falta muy poco para nuestro reencuentro, y saber que estarás aquí, conmigo, hace que mi corazón lata con una emoción difícil de explicar. Este año, mi cumpleaños tendrá un significado completamente distinto, porque el mejor regalo no se envuelve… llega, sonríe y cambia todo con su presencia.</p>
+
+        <p>También quiero que sepas lo feliz que me hace la idea de conocer a Sebitas. Saber que podré compartir momentos con alguien tan importante en tu vida es algo que recibo con todo el cariño del mundo. Para mí no es solo conocerte más a ti, es abrir espacio en mi corazón para lo que amas.</p>
+
+        <p>Lo nuestro me hace bien, me da calma, me inspira y me recuerda lo bonito que es coincidir con alguien que se siente hogar incluso en la distancia. Gracias por tu amor, por tu forma de ser, por cada risa y por cada momento que hemos construido hasta hoy.</p>
+
+        <p>Estoy contando los días para verte llegar, para ese primer abrazo, para mirarte sin una pantalla de por medio y confirmar que todo lo que sentimos es aún más real cuando estamos juntos.</p>
+
+        <p>Felices nueve meses, mi amor. Lo más hermoso de nuestra historia es que apenas estamos comenzando… y no sabes cuánto me emociona todo lo que nos queda por vivir.</p>
+
+        <p><strong>Te amo muchísimo ❤️</strong></p>
             </div>
         </div>
     
@@ -282,6 +385,22 @@
     </audio>
 
     <script src="script.js"></script>
-    </script>
+    <script>
+window.addEventListener("load", function(){
+
+    setTimeout(()=>{
+        const intro = document.querySelector(".intro");
+
+        intro.style.opacity = "0";
+        intro.style.transition = "opacity 1.5s ease";
+
+        setTimeout(()=>{
+            intro.style.display = "none";
+        },1500);
+
+    },6000);
+
+});
+</script>
 </body>
 </html>
